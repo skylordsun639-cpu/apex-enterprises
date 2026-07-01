@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apex Enterprises</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header><h1>Apex Enterprises</h1><p>AI Scripts for TikTok, Instagram & more</p></header>
+  <section style="padding:20px;max-width:600px;margin:auto;">
+    <h2>Get Custom Script</h2>
+    <form id="orderForm">
+      <input type="text" id="topic" placeholder="Topic (example: fitness motivation)" required><br><br>
+      <input type="number" id="length" placeholder="Length in minutes" min="1" required><br><br>
+      <input type="text" id="tone" placeholder="Tone (motivational, funny...)" required><br><br>
+      <input type="hidden" id="price_id" value="{{ price_id }}">
+      <button type="submit">Get Script - Pay Now</button>
+    </form>
+  </section>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
